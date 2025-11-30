@@ -45,7 +45,7 @@ class Indenter {
 		return nl + tab + message;
 	}
 }
-class Declarations extends Vector {
+class Declarations extends Vector<Declaration> {
 	// Declarations = Declaration *
 	//				  (a Vector of Declarations d1, d2, ..., dn)
 
@@ -120,7 +120,7 @@ class Block extends Statement {
 	// Block = Statement*
 	//		   (a Vector of members) 
 
-	public Vector blockmembers = new Vector();
+	public Vector<Statement> blockmembers = new Vector<>();
 
 	public String display(int level) {
 		String s = super.display(level);
